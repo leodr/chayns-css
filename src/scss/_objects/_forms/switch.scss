@@ -1,40 +1,40 @@
-@import '../../_color';
+@import "../../_color";
 
 .switch {
-  display: none;
+    display: none;
 
-  & + label {
-    background-color: $switch-background-color;
-    width: 28px;
-    height: 13px;
-    border-radius: 8px;
-    display: inline-block;
-    margin: 0 10px;
+    + label {
+        background-color: $switch-background-color;
+        border-radius: 8px;
+        display: inline-block;
+        height: 13px;
+        margin: 0 10px;
+        width: 28px;
 
-    &:before {
-      display: block;
-      position: absolute;
-      width: 16px;
-      height: 16px;
-      margin-top: -1.5px;
-      margin-left: -3px;
-      background-color: $switch-button-background-color;
-      border-radius: 50%;
-      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
-      content: ' ';
-      transition: transform 100ms linear;
+        &::before {
+            background-color: $switch-button-background-color;
+            border-radius: 50%;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+            content: " ";
+            display: block;
+            height: 16px;
+            margin-left: -3px;
+            margin-top: -1.5px;
+            position: absolute;
+            transition: transform 100ms linear;
+            width: 16px;
+        }
     }
-  }
 
-  &:checked + label:before {
-    transform: translateX(22px);
-  }
+    &:checked + label::before {
+        transform: translateX(22px);
+    }
 
-  &:checked + label {
-    background-color: $switch-checked-background-color;
-  }
+    &:checked + label {
+        background-color: $switch-checked-background-color;
+    }
 
-  &:disabled + label {
-    opacity: 0.5;
-  }
+    &:disabled + label {
+        opacity: 0.5;
+    }
 }

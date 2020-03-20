@@ -1,68 +1,69 @@
-@import '../../_color';
+@import "../../_color";
 
 select::-ms-expand {
-  display: none; // removes ugly ie arrow
+    display: none; // removes ugly ie arrow
 }
 
 .select {
-  display: inline-flex;
-  height: 30px;
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  background-color: $select-background-color;
-  transition: box-shadow .12s ease;
-  border-radius: 2px;
-  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1), 0 0 0 1px $select-border-color inset;
-  overflow: hidden;
-
-  &:after {
-    position: absolute;
-    right: 8px;
-    top: 0;
-    content: "\e936";
-    font-family: 'FontTS' !important;
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    padding-left: 8px;
-    color: $select-icon-color;
-    transition: color .12s ease;
-    pointer-events: none;
-    height: 100%;
-    display: flex;
     align-items: center;
-  }
+    background-color: $select-background-color;
+    border-radius: 2px;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1),
+        0 0 0 1px $select-border-color inset;
+    display: inline-flex;
+    height: 30px;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    transition: box-shadow 0.12s ease;
 
-  select {
-    color: $base-text-color;
-    appearance: none;
-    border: none;
-    background-color: transparent;
-    width: 100%;
-    padding: 2px 24px 2px 12px;
-    line-height: 20px;
-    cursor: pointer;
-
-    option {
-      background-color: $select-background-color;
+    &::after {
+        align-items: center;
+        color: $select-icon-color;
+        content: "\e936";
+        display: flex;
+        font-family: "FontTS" !important;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: normal;
+        height: 100%;
+        line-height: 1;
+        padding-left: 8px;
+        pointer-events: none;
+        position: absolute;
+        right: 8px;
+        text-transform: none;
+        top: 0;
+        transition: color 0.12s ease;
     }
-  }
 
-  &.select--disabled {
-    opacity: .4;
-  }
+    select {
+        appearance: none;
+        background-color: transparent;
+        border: none;
+        color: $base-text-color;
+        cursor: pointer;
+        line-height: 20px;
+        padding: 2px 24px 2px 12px;
+        width: 100%;
+
+        option {
+            background-color: $select-background-color;
+        }
+    }
+
+    &.select--disabled {
+        opacity: 0.4;
+    }
 }
 
 // prevents hover on mobile/in app since hover on mobile is triggered by a tap
 .chayns--desktop {
-  .select:not(.select--disabled):hover {
-    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.09), 0 0 0 1px $select-hover-border-color inset;
-    &:after {
-      color: $select-hover-icon-color;
+    .select:not(.select--disabled):hover {
+        box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.09),
+            0 0 0 1px $select-hover-border-color inset;
+        &::after {
+            color: $select-hover-icon-color;
+        }
     }
-  }
 }

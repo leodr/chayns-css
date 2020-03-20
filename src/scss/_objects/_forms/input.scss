@@ -1,115 +1,116 @@
-@import '../../_color';
+@import "../../_color";
 
 //input preperation
 @mixin chayns-placeholder() {
-  color: $input-placeholder-color;
-  transition: opacity 150ms ease-in-out;
+    color: $input-placeholder-color;
+    transition: opacity 150ms ease-in-out;
 }
 
 @mixin chayns-placeholder--invalid() {
-  color: $input-placeholder-required-color !important;
-  font-weight: 700;
+    color: $input-placeholder-required-color !important;
+    font-weight: 700;
 }
 
 .input {
-  &::-webkit-input-placeholder {
-    @include chayns-placeholder();
-  }
-  &:-ms-input-placeholder {
-    @include chayns-placeholder();
-  }
-  &:-moz-placeholder {
-    @include chayns-placeholder();
-  }
-  &::-moz-placeholder {
-    @include chayns-placeholder();
-  }
-
-  &[validate]:not(.valid), &--invalid {
-    @include chayns-placeholder--invalid();
     &::-webkit-input-placeholder {
-      @include chayns-placeholder--invalid();
+        @include chayns-placeholder();
     }
     &:-ms-input-placeholder {
-      @include chayns-placeholder--invalid();
+        @include chayns-placeholder();
     }
     &:-moz-placeholder {
-      @include chayns-placeholder--invalid();
+        @include chayns-placeholder();
     }
     &::-moz-placeholder {
-      @include chayns-placeholder--invalid();
+        @include chayns-placeholder();
     }
-  }
 
-  &::-ms-clear {
-    display: none;
-  }
-  &:focus::-webkit-input-placeholder {
-    opacity: 0;
-  }
-  &:focus:-ms-input-placeholder {
-    opacity: 0;
-  }
-  &:focus:-moz-placeholder {
-    opacity: 0;
-  }
-  &:focus::-moz-placeholder {
-    opacity: 0;
-  }
+    &[validate]:not(.valid),
+    &--invalid {
+        @include chayns-placeholder--invalid();
+        &::-webkit-input-placeholder {
+            @include chayns-placeholder--invalid();
+        }
+        &:-ms-input-placeholder {
+            @include chayns-placeholder--invalid();
+        }
+        &:-moz-placeholder {
+            @include chayns-placeholder--invalid();
+        }
+        &::-moz-placeholder {
+            @include chayns-placeholder--invalid();
+        }
+    }
+
+    &::-ms-clear {
+        display: none;
+    }
+    &:focus::-webkit-input-placeholder {
+        opacity: 0;
+    }
+    &:focus:-ms-input-placeholder {
+        opacity: 0;
+    }
+    &:focus:-moz-placeholder {
+        opacity: 0;
+    }
+    &:focus::-moz-placeholder {
+        opacity: 0;
+    }
 }
 
-.input[type=number] {
-  -moz-appearance: textfield;
+.input[type="number"] {
+    -moz-appearance: textfield;
 
-  &::-webkit-inner-spin-button,
-  &::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
 }
 
 .input {
-  padding: 5px 1px;
-  font-weight: 300;
-  box-shadow: none;
-  background-color: transparent;
-  border: 1px solid transparent;
-  border-bottom-color: $input-border-color;
-  border-radius: 0;
-  color: $input-color;
-  cursor: text;
-  -webkit-user-modify: read-write-plaintext-only;
-  -webkit-appearance: none;
-  transition: border-color 0.4s, color 0.4s, font-weight 0.4s;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-bottom-color: $input-border-color;
+    border-radius: 0;
+    box-shadow: none;
+    color: $input-color;
+    cursor: text;
+    font-weight: 300;
+    padding: 5px 1px;
+    transition: border-color 0.4s, color 0.4s, font-weight 0.4s;
+    -webkit-user-modify: read-write-plaintext-only;
 
-  &:focus {
-    border-bottom-color: $input-focus-border-bottom-color;
-  }
+    &:focus {
+        border-bottom-color: $input-focus-border-bottom-color;
+    }
 
-  &--disabled{
-    opacity: 0.6;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    pointer-events: none;
-  }
+    &--disabled {
+        opacity: 0.6;
+        pointer-events: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
 
-  &--invalid {
-    color: $input-placeholder-required-color !important;
-    font-weight: 700 !important;
-  }
+    &--invalid {
+        color: $input-placeholder-required-color !important;
+        font-weight: 700 !important;
+    }
 }
 
 textarea.input {
-  resize: none;
-  overflow-x: hidden;
+    overflow-x: hidden;
+    resize: none;
 }
 
 //checkbox/radio/switch preparation
-input[type=checkbox].disabled,
-input[type=checkbox][disabled],
-input[type=radio].disabled,
-input[type=radio][disabled] {
-  cursor: not-allowed;
+input[type="checkbox"].disabled,
+input[type="checkbox"][disabled],
+input[type="radio"].disabled,
+input[type="radio"][disabled] {
+    cursor: not-allowed;
 }

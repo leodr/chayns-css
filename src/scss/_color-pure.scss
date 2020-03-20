@@ -1,131 +1,131 @@
 // -- This colors will be replaced by the css api --
-$color: #AC0000 !default;
-$headerBarColor: #AC0000 !default;
-$cwBackgroundColor: mix($color, #FFFFFF, 10%) !default; // 101
+$color: #ac0000 !default;
+$headerBarColor: #ac0000 !default;
+$cwBackgroundColor: mix($color, #fff, 10%) !default; // 101
 $brightness: 100% !default;
 // -------------------------------------------------
 
-$cwBodyBackgroundColor: #ffffff !default;
-$dependOnBrightnessColor: mix($color, #FFFFFF, $brightness);
+$cwBodyBackgroundColor: #fff !default;
+$dependOnBrightnessColor: mix($color, #fff, $brightness);
 
 $colors: (
-        '000': mix(#000000, #FFFFFF, 0%),
-        '001': mix(#000000, #FFFFFF, 3%),
-        '002': mix(#000000, #FFFFFF, 10%),
-        '003': mix(#000000, #FFFFFF, 25%),
-        '004': mix(#000000, #FFFFFF, 40%),
-        '005': mix(#000000, #FFFFFF, 50%),
-        '006': mix(#000000, #FFFFFF, 60%),
-        '007': mix(#000000, #FFFFFF, 75%),
-        '008': mix(#000000, #FFFFFF, 90%),
-        '009': mix(#000000, #FFFFFF, 100%),
-        '100': mix($color, #FFFFFF, 10%),
-        '101': mix($color, #FFFFFF, 10%),
-        '102': mix($color, #FFFFFF, 20%),
-        '103': mix($color, #FFFFFF, 30%),
-        '104': mix($color, #FFFFFF, 40%),
-        '105': mix($color, #FFFFFF, 50%),
-        '106': mix($color, #FFFFFF, 60%),
-        '107': mix($color, #FFFFFF, 70%),
-        '108': mix($color, #FFFFFF, 80%),
-        '109': mix($color, #FFFFFF, 90%),
-        '200': mix($color, #E4E4E4, 0%),
-        '201': mix($color, #E4E4E4, 10%),
-        '202': mix($color, #E4E4E4, 20%),
-        '203': mix($color, #E4E4E4, 30%),
-        '204': mix($color, #E4E4E4, 40%),
-        '205': mix($color, #E4E4E4, 50%),
-        '206': mix($color, #E4E4E4, 60%),
-        '207': mix($color, #E4E4E4, 70%),
-        '208': mix($color, #E4E4E4, 80%),
-        '209': mix($color, #E4E4E4, 90%),
-        '300': mix($color, #242424, 0%),
-        '301': mix($color, #242424, 10%),
-        '302': mix($color, #242424, 20%),
-        '303': mix($color, #242424, 30%),
-        '304': mix($color, #242424, 40%),
-        '305': mix($color, #242424, 50%),
-        '306': mix($color, #242424, 60%),
-        '307': mix($color, #242424, 70%),
-        '308': mix($color, #242424, 80%),
-        '309': mix($color, #242424, 90%),
-        'primary': $color,
-        'headline': $color,
-        'text': #222222,
-        'header-bar': $headerBarColor,
-        'cw-background': $cwBackgroundColor
+    "000": mix(#000, #fff, 0%),
+    "001": mix(#000, #fff, 3%),
+    "002": mix(#000, #fff, 10%),
+    "003": mix(#000, #fff, 25%),
+    "004": mix(#000, #fff, 40%),
+    "005": mix(#000, #fff, 50%),
+    "006": mix(#000, #fff, 60%),
+    "007": mix(#000, #fff, 75%),
+    "008": mix(#000, #fff, 90%),
+    "009": mix(#000, #fff, 100%),
+    "100": mix($color, #fff, 10%),
+    "101": mix($color, #fff, 10%),
+    "102": mix($color, #fff, 20%),
+    "103": mix($color, #fff, 30%),
+    "104": mix($color, #fff, 40%),
+    "105": mix($color, #fff, 50%),
+    "106": mix($color, #fff, 60%),
+    "107": mix($color, #fff, 70%),
+    "108": mix($color, #fff, 80%),
+    "109": mix($color, #fff, 90%),
+    "200": mix($color, #e4e4e4, 0%),
+    "201": mix($color, #e4e4e4, 10%),
+    "202": mix($color, #e4e4e4, 20%),
+    "203": mix($color, #e4e4e4, 30%),
+    "204": mix($color, #e4e4e4, 40%),
+    "205": mix($color, #e4e4e4, 50%),
+    "206": mix($color, #e4e4e4, 60%),
+    "207": mix($color, #e4e4e4, 70%),
+    "208": mix($color, #e4e4e4, 80%),
+    "209": mix($color, #e4e4e4, 90%),
+    "300": mix($color, #242424, 0%),
+    "301": mix($color, #242424, 10%),
+    "302": mix($color, #242424, 20%),
+    "303": mix($color, #242424, 30%),
+    "304": mix($color, #242424, 40%),
+    "305": mix($color, #242424, 50%),
+    "306": mix($color, #242424, 60%),
+    "307": mix($color, #242424, 70%),
+    "308": mix($color, #242424, 80%),
+    "309": mix($color, #242424, 90%),
+    "primary": $color,
+    "headline": $color,
+    "text": #222,
+    "header-bar": $headerBarColor,
+    "cw-background": $cwBackgroundColor
 );
 
 $colors1: (
-        1: mix($color, #FFFFFF, 5%),
-        2: mix($color, #FFFFFF, 20%),
-        3: mix($color, #FFFFFF, 40%),
-        4: mix($color, #FFFFFF, 60%),
-        5: mix($color, #FFFFFF, 80%),
-        6: mix($color, #FFFFFF, 90%),
+    1: mix($color, #fff, 5%),
+    2: mix($color, #fff, 20%),
+    3: mix($color, #fff, 40%),
+    4: mix($color, #fff, 60%),
+    5: mix($color, #fff, 80%),
+    6: mix($color, #fff, 90%)
 );
 $colors2: (
-        1: mix($color, #7D7D7D, 70%),
-        2: mix($color, #7D7D7D, 40%),
-        3: mix($color, #7D7D7D, 15%),
-        4: mix($color, #7D7D7D, 3%),
+    1: mix($color, #7d7d7d, 70%),
+    2: mix($color, #7d7d7d, 40%),
+    3: mix($color, #7d7d7d, 15%),
+    4: mix($color, #7d7d7d, 3%)
 );
 $colors3: (
-        1: mix($color, #242424, 70%),
-        2: mix($color, #242424, 40%),
-        3: mix($color, #242424, 15%),
-        4: mix($color, #242424, 3%),
+    1: mix($color, #242424, 70%),
+    2: mix($color, #242424, 40%),
+    3: mix($color, #242424, 15%),
+    4: mix($color, #242424, 3%)
 );
 $colors4: (
-        1: mix($color, #101010, 40%),
-        2: mix($color, #101010, 15%),
-        3: mix($color, #101010, 3%),
+    1: mix($color, #101010, 40%),
+    2: mix($color, #101010, 15%),
+    3: mix($color, #101010, 3%)
 );
 
 $shades: (
-        1: #ffffff,
-        2: #f1f1f1,
-        3: #dbdbdb,
-        4: #b7b7b7,
-        5: #777777,
-        6: #474747,
-        7: #222222,
-        8: #000000
+    1: #fff,
+    2: #f1f1f1,
+    3: #dbdbdb,
+    4: #b7b7b7,
+    5: #777,
+    6: #474747,
+    7: #222,
+    8: #000
 );
 
 $red: (
-        1: #5a0303,
-        2: #96060b,
-        3: #ca8181,
-        4: #e9cccc
+    1: #5a0303,
+    2: #96060b,
+    3: #ca8181,
+    4: #e9cccc
 );
 
 $yellow: (
-        1: #9F5F00,
-        2: #FF9800,
-        3: #FFB74D,
-        4: #FFF3E0,
+    1: #9f5f00,
+    2: #ff9800,
+    3: #ffb74d,
+    4: #fff3e0
 );
 
 $green: (
-        1: #074709,
-        2: #0e7710,
-        3: #85ba87,
-        4: #cde3ce
+    1: #074709,
+    2: #0e7710,
+    3: #85ba87,
+    4: #cde3ce
 );
 
 //base config colors
-$base-text-color: #222222;
+$base-text-color: #222;
 
 //anchor
 $anchor-color: $color;
 
 //accordion
 $accordion-border-bottom-color: $dependOnBrightnessColor;
-$accordion-hover-background-color: map_get($colors, '100');
+$accordion-hover-background-color: map_get($colors, "100");
 $accordion-arrow-color: $dependOnBrightnessColor;
 $accordion-item-border-bottom-color: map_get($colors1, 3);
-$accordion-open-background-color: map_get($colors, '100');
+$accordion-open-background-color: map_get($colors, "100");
 
 //badge
 $badge-color: #545454;
@@ -150,7 +150,7 @@ $choosebutton-hover-background-color: map_get($colors1, 3);
 $contextmenu-color: map_get($shades, 6);
 $contextmenu-background-color: map_get($shades, 1);
 $contextmenu-hover-background-color: map_get($shades, 2);
-$contextmenu-border-color: rgba(0, 0, 0, .1);
+$contextmenu-border-color: rgba(0, 0, 0, 0.1);
 $contextmenu-icon-color: map_get($colors1, 5);
 $image-tool-background-color: map_get($shades, 1);
 $image-tool-color: $color;
@@ -163,16 +163,16 @@ $select-border-color: map_get($colors1, 3);
 $select-hover-border-color: map_get($colors1, 4);
 
 //content_card
-$content-card-background-color: map_get($colors, '100');
+$content-card-background-color: map_get($colors, "100");
 $content-card-success-border-color: map_get($green, 1);
 $content-card-success-background-color: map_get($green, 4);
-$content-card-success-color: #222222;
+$content-card-success-color: #222;
 $content-card-warning-border-color: map_get($yellow, 1);
 $content-card-warning-background-color: map_get($yellow, 4);
-$content-card-warning-color: #222222;
+$content-card-warning-color: #222;
 $content-card-danger-border-color: map_get($red, 1);
 $content-card-danger-background-color: map_get($red, 4);
-$content-card-danger-color: #222222;
+$content-card-danger-color: #222;
 
 //forms
 //input / dynamic-input
@@ -188,11 +188,11 @@ $modeswitchBorderColor: map_get($colors1, 2);
 $modeswitchIconColor: $color;
 
 //switch
-$switch-background-color: rgba(map_get($colors, 'headline'), .3);
+$switch-background-color: rgba(map_get($colors, "headline"), 0.3);
 // $switch-disabled-background-color: #d5d5d5;
-$switch-button-background-color: #ffffff;
+$switch-button-background-color: #fff;
 // $switch-disabled-button-background-color: #bdbdbd;
-$switch-checked-background-color: rgba(map_get($colors, 'headline'), .7);
+$switch-checked-background-color: rgba(map_get($colors, "headline"), 0.7);
 
 //radio / checkbox
 $checkbox-background-color: map_get($colors1, 2);
@@ -206,10 +206,10 @@ $h4-color: $color;
 $h5-color: $color;
 
 //footer
-$footer-color: map_get($colors, '005');
+$footer-color: map_get($colors, "005");
 
 //selection
-$selection-color: #ffffff;
+$selection-color: #fff;
 $selection-background-color: map_get($colors1, 4);
 
 //wait-cursor
@@ -255,9 +255,9 @@ $tooltip-background-color: map_get($shades, 1);
 $bubble-background-color: map_get($shades, 1);
 
 //slider
-$slider-range-background-color: map_get($colors, 'primary');
-$slider-track-background-color: map_get($colors, '003');
-$slider-dot-background-color: #ffffff;
+$slider-range-background-color: map_get($colors, "primary");
+$slider-track-background-color: map_get($colors, "003");
+$slider-dot-background-color: #fff;
 
 //calendar
 $calendar-selected-background-color: map_get($colors1, 2);
@@ -282,6 +282,6 @@ $editor-border-color: map_get($colors1, 6);
 $editor-border-hover-color: map_get($colors1, 6);
 
 //progress-bar
-$progress-bar-track: map_get($colors, '100');
-$progress-bar-indicator: map_get($colors, 'primary');
-$progress-bar-text: map_get($colors, 'headline');
+$progress-bar-track: map_get($colors, "100");
+$progress-bar-indicator: map_get($colors, "primary");
+$progress-bar-text: map_get($colors, "headline");

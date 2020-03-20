@@ -2,251 +2,251 @@
 
 // @deprecated
 .calendar {
-  &__navigation {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: baseline;
-    z-index: 1;
-  }
-
-  &__navigate {
-    position:absolute;
-    cursor: pointer;
-    opacity: 0.8;
-
-    &.right {
-      right: 0;
+    &__navigation {
+        align-items: baseline;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position: relative;
+        z-index: 1;
     }
-  }
 
-  &__months {
-    position: relative;
-    display: flex;
-    left: -50%;
-    width: 200%;
-    height: 100%;
-    max-height: 180px;
-  }
+    &__navigate {
+        cursor: pointer;
+        opacity: 0.8;
+        position: absolute;
+
+        &.right {
+            right: 0;
+        }
+    }
+
+    &__months {
+        display: flex;
+        height: 100%;
+        left: -50%;
+        max-height: 180px;
+        position: relative;
+        width: 200%;
+    }
 }
 
 .cc__calendar {
-  position: relative;
-
-  &__navigation {
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: baseline;
-    z-index: 1;
-    width: 100%;
-    user-select: none;
-  }
-
-  &__navigate {
-    cursor: pointer;
-    opacity: 0.8;
-
-    &.left, &.right {
-      cursor: pointer;
-    }
-
-    &.middle {
-      flex-grow: 1;
-    }
-  }
-
-  &__months {
-    &__wrapper {
-      display: flex;
-      width: 200%;
-      transform: translateX(0%);
-
-      &--animate {
-        transition: transform .3s;
-      }
-    }
-  }
-
-  .day__item {
     position: relative;
 
-    &:before {
-      content: "";
-      display: block;
-      padding-top: 100%;
+    &__navigation {
+        align-items: baseline;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position: absolute;
+        user-select: none;
+        width: 100%;
+        z-index: 1;
     }
 
-    .day__item__content {
-      position: absolute;
+    &__navigate {
+        cursor: pointer;
+        opacity: 0.8;
 
-      top: 50%;
-      left: 50%;
+        &.left,
+        &.right {
+            cursor: pointer;
+        }
 
-      transform: translate(-50%, -50%);
+        &.middle {
+            flex-grow: 1;
+        }
     }
-  }
+
+    &__months {
+        &__wrapper {
+            display: flex;
+            transform: translateX(0%);
+            width: 200%;
+
+            &--animate {
+                transition: transform 0.3s;
+            }
+        }
+    }
+
+    .day__item {
+        position: relative;
+
+        &::before {
+            content: "";
+            display: block;
+            padding-top: 100%;
+        }
+
+        .day__item__content {
+            left: 50%;
+            position: absolute;
+
+            top: 50%;
+
+            transform: translate(-50%, -50%);
+        }
+    }
 }
 
 .puffer {
-  height: 190px;
+    height: 190px;
 }
 
 .month {
-  width: 25%;
-  height: 100%;
-  padding: 0 1rem;
-  text-align: center;
-
-  &__title {
-    margin-bottom: 0.25rem;
+    height: 100%;
+    padding: 0 1rem;
     text-align: center;
+    width: 25%;
 
-    user-select: none;
-  }
+    &__title {
+        margin-bottom: 0.25rem;
+        text-align: center;
 
-  &__table {
-    display: table;
-    border-spacing: 2px;
-    width: 100%;
-    table-layout: fixed;
-  }
+        user-select: none;
+    }
+
+    &__table {
+        border-spacing: 2px;
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+    }
 }
 
 .day {
-  &__row {
-    display: table-row;
-  }
+    &__row {
+        display: table-row;
+    }
 
-  &__item, &__item--text {
-    display: table-cell;
-    height: 1rem;
-    margin: 5em;
-    flex-grow: 1;
-    text-align: center;
-    font-size: 90%;
-    border: 0.1em solid transparent;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-  }
+    &__item,
+    &__item--text {
+        border: 0.1em solid transparent;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        display: table-cell;
+        flex-grow: 1;
+        font-size: 90%;
+        height: 1rem;
+        margin: 5em;
+        text-align: center;
+    }
 
-  &-text {
-    font-weight: bold;
-  }
+    &-text {
+        font-weight: bold;
+    }
 
-  &-out-month {
-    opacity: 0.3;
-  }
+    &-out-month {
+        opacity: 0.3;
+    }
 }
 
 .right {
-  &-enter {
-    transform: translateX(100%);
-  }
+    &-enter {
+        transform: translateX(100%);
+    }
 
-  &-enter-active {
-    transform: translateX(0%);
-    transition: transform 300ms ease-in-out;
-  }
+    &-enter-active {
+        transform: translateX(0%);
+        transition: transform 300ms ease-in-out;
+    }
 
-  &__shown {
-    position: absolute;
-    left: 50%;
-  }
+    &__shown {
+        left: 50%;
+        position: absolute;
+    }
 
-  &__hidden {
-    position: absolute;
-    left: 75%;
-  }
+    &__hidden {
+        left: 75%;
+        position: absolute;
+    }
 }
 
 .left {
-  &-enter {
-    transform: translateX(-100%);
-  }
+    &-enter {
+        transform: translateX(-100%);
+    }
 
-  &-enter-active {
-    transform: translateX(0%);
-    transition: transform 300ms ease-in-out;
-  }
+    &-enter-active {
+        transform: translateX(0%);
+        transition: transform 300ms ease-in-out;
+    }
 
-  &__hidden {
-    position: absolute;
-    left: 0;
-  }
+    &__hidden {
+        left: 0;
+        position: absolute;
+    }
 
-  &__shown {
-    position: absolute;
-    left: 25%;
-  }
+    &__shown {
+        left: 25%;
+        position: absolute;
+    }
 }
 
-@media screen
-and (max-width: 450px)
-and (orientation: portrait) {
-  .calendar__months {
-    position: relative;
-    display: flex;
-    left: -100%;
-    width: 400%;
-    height: 100%;
-  }
-
-  .cc__calendar__months {
-    display: block;
-    left: 0;
-    width: 100%;
-
-    &__wrapper {
-      width: 400%;
+@media screen and (max-width: 450px) and (orientation: portrait) {
+    .calendar__months {
+        display: flex;
+        height: 100%;
+        left: -100%;
+        position: relative;
+        width: 400%;
     }
-  }
+
+    .cc__calendar__months {
+        display: block;
+        left: 0;
+        width: 100%;
+
+        &__wrapper {
+            width: 400%;
+        }
+    }
 }
 
 .is-active {
-  opacity: 0.8;
-  cursor: pointer;
+    cursor: pointer;
+    opacity: 0.8;
 }
 
 .is-marked {
-  opacity: 0.7;
+    opacity: 0.7;
 }
 .is-marked-is-highlighted {
-  background-color: #228b22;
-  border: 0.1em solid #fff;
-  color: #fff;
+    background-color: #228b22;
+    border: 0.1em solid #fff;
+    color: #fff;
 }
 
 .is-selected {
-  opacity: 1;
-  font-weight: bolder;
+    font-weight: bolder;
+    opacity: 1;
 }
 
 .is-deactive {
-  opacity: 0.6;
+    opacity: 0.6;
 }
 
 .noselect {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .cc__calendar {
-  .is-marked-is-highlighted {
-    border: none;
-    background-color: $calendar-highlighted-background-color;
-    color: $calendar-highlighted-color;
-  }
+    .is-marked-is-highlighted {
+        background-color: $calendar-highlighted-background-color;
+        border: none;
+        color: $calendar-highlighted-color;
+    }
 
-  .is-selected {
-    background-color: $calendar-selected-background-color;
-    color: $calendar-selected-color;
-  }
+    .is-selected {
+        background-color: $calendar-selected-background-color;
+        color: $calendar-selected-color;
+    }
 }

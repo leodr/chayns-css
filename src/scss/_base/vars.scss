@@ -1,6 +1,8 @@
-@import '../_color';
+@import "../_color";
 
 .chayns {
-  --chayns-color-rgb: #{red($color), green($color), blue($color)};
-  --chayns-bg-rgb: #{red($accordion-open-background-color), green($accordion-open-background-color), blue($accordion-open-background-color)};
+    --chayns-color-rgb: #{red($color), green($color), blue($color)};
+    --chayns-bg-rgb: #{red($accordion-open-background-color),
+        green($accordion-open-background-color),
+        blue($accordion-open-background-color)};
 }

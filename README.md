@@ -22,18 +22,14 @@ If you want to use the chayns API in your own tapp, we suggest using the code be
 
 To work on the chayns CSS API, you need to install the dependencies:
 
-``
-npm i
-``
+`npm i`
 
 Once the dependencies have been installed successfully, you can add your ssl certificate files in webpack/ssl.
-If you don't have one, the dev server will be started without https. 
+If you don't have one, the dev server will be started without https.
 To use chayns with a non-https tapp, you have to add the url parameter `nrd=1`.
 
 Then, you can start the dev-server:
 
-``
-npm start
-``
+`npm start`
 
 The dev page will be available at port 9000.

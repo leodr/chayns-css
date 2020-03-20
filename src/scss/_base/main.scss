@@ -1,22 +1,22 @@
-@import '../config';
+@import "../config";
 
 :root {
-  font-family: $base-font-family;
-  font-size: $base-font-size;
-  line-height: $base-line-height;
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
 }
 
 // Main Styles
 html {
-  min-height: 100%;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: geometricPrecision;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100%;
+    text-rendering: geometricPrecision;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
 }
 
 // Base Style
 p:not(:last-child),
 .paragraph {
-  margin-bottom: 8px;
+    margin-bottom: 8px;
 }

@@ -1,124 +1,125 @@
-@import '../../_color';
-@import '../../_generic/mixins';
+@import "../../_color";
+@import "../../_generic/mixins";
 
 .button,
 .choosebutton {
-  position: relative;
-  display: inline-block;
-  text-align: center;
-  border: 0;
-  border-radius: 3px;
-  cursor: pointer;
-  user-select: none;
-  transition: background-color 150ms ease;
-  overflow: hidden;
-  line-height: 1.15;
+    border: 0;
+    border-radius: 3px;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 1.15;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    transition: background-color 150ms ease;
+    user-select: none;
 
-  &:not(.button--show-focus) {
-    outline: none;
-  }
-
-  &:not(.button--disabled) {
-    &:after {
-      content: "";
-      background-color: rgba(255, 255, 255, 0.5);
-      display: block;
-      position: absolute;
-      right: 0;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      opacity: 0;
-      transition: opacity 500ms;
+    &:not(.button--show-focus) {
+        outline: none;
     }
 
-    &:active:after {
-      opacity: 0.5;
-      transition: opacity 0s;
+    &:not(.button--disabled) {
+        &::after {
+            background-color: rgba(255, 255, 255, 0.5);
+            bottom: 0;
+            content: "";
+            display: block;
+            left: 0;
+            opacity: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transition: opacity 500ms;
+        }
+
+        &:active::after {
+            opacity: 0.5;
+            transition: opacity 0s;
+        }
     }
-  }
 
-  &--disabled {
-    opacity: 0.5;
-    cursor: default;
-    pointer-events: none;
-  }
+    &--disabled {
+        cursor: default;
+        opacity: 0.5;
+        pointer-events: none;
+    }
 
-  &__icon {
-    background-color: rgba(255, 255, 255, 0.2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    position: absolute;
-  }
+    &__icon {
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.2);
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        left: 0;
+        position: absolute;
+        top: 0;
+    }
 }
 
 // Buttons
 .button {
-  min-height: 30px;
-  padding: 7px 12px;
-  color: $button-color;
-  background-color: $button-background-color;
-  box-shadow: 1px 2px 3px rgba(0, 0, 0, .2);
+    background-color: $button-background-color;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+    color: $button-color;
+    min-height: 30px;
+    padding: 7px 12px;
 
-  &.button--secondary {
-    color: $button2-color;
-    background-color: $button2-background-color;
-    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
-  }
+    &.button--secondary {
+        background-color: $button2-background-color;
+        box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
+        color: $button2-color;
+    }
 
-  &__icon {
-    width: 30px;
-  }
+    &__icon {
+        width: 30px;
+    }
 
-  &--icon {
-    padding-left: 42px;
-  }
+    &--icon {
+        padding-left: 42px;
+    }
 }
 
 // Choose Button
 .choosebutton {
-  color: $choosebutton-color;
-  min-height: 27px;
-  padding: 6px 10px;
-  font-size: 0.95rem;
-  font-weight: normal;
-  background-color: $choosebutton-background-color;
-  box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.09);
+    background-color: $choosebutton-background-color;
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.09);
+    color: $choosebutton-color;
+    font-size: 0.95rem;
+    font-weight: normal;
+    min-height: 27px;
+    padding: 6px 10px;
 
-  &__icon {
-    width: 27px;
-  }
+    &__icon {
+        width: 27px;
+    }
 
-  &--icon {
-    padding-left: 39px;
-  }
+    &--icon {
+        padding-left: 39px;
+    }
 }
 
 // prevents hover on mobile/in app since hover on mobile is triggered by a tap
 .chayns--desktop {
-  .button {
-    &:not(.button--disabled):hover, &--show-focus:focus {
-      background-color: $button-hover-background-color;
+    .button {
+        &:not(.button--disabled):hover,
+        &--show-focus:focus {
+            background-color: $button-hover-background-color;
+        }
     }
-  }
 
-  .button.button--secondary {
-    &:not(.button--disabled) {
-      &:hover {
-        background-color: $button2-hover-background-color;
-      }
+    .button.button--secondary {
+        &:not(.button--disabled) {
+            &:hover {
+                background-color: $button2-hover-background-color;
+            }
+        }
     }
-  }
 
-  .choosebutton {
-    &:not(.button--disabled) {
-      &:hover {
-        background-color: $choosebutton-hover-background-color;
-      }
+    .choosebutton {
+        &:not(.button--disabled) {
+            &:hover {
+                background-color: $choosebutton-hover-background-color;
+            }
+        }
     }
-  }
 }

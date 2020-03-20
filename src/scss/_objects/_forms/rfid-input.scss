@@ -1,26 +1,27 @@
 // @deprecated
 .cc__rfid-input {
-  &__wrapper {
-    display: flex;
+    &__wrapper {
+        display: flex;
 
-    .cc__rfid-input__input {
-      flex-grow: 1;
-      margin-right: 20px;
-      align-self: flex-end;
+        .cc__rfid-input__input {
+            align-self: flex-end;
+            flex-grow: 1;
+            margin-right: 20px;
+        }
+
+        .button {
+            margin-top: 3px;
+        }
+    }
+    &__control {
+        margin: 15px 0;
+        text-align: center;
     }
 
-    .button{
-      margin-top: 3px;
+    &--enable-scan {
+        .cc__rfid-input__scan,
+        .cc__rfid-input__confirm {
+            overflow: visible;
+        }
     }
-  }
-  &__control {
-    text-align: center;
-    margin: 15px 0;
-  }
-
-  &--enable-scan {
-    .cc__rfid-input__scan, .cc__rfid-input__confirm {
-      overflow: visible;
-    }
-  }
 }

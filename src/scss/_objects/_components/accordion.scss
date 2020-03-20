@@ -1,173 +1,170 @@
-@import '../../_color';
+@import "../../_color";
 
 .accordion {
-  margin-top: 10px;
-  border-bottom: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    margin-top: 10px;
 
-  transition:
-    border 200ms ease-in-out 150ms,
-    background-color 100ms ease,
-    margin-bottom 200ms linear,
-    border-radius 200ms,
-    box-shadow 200ms;
+    transition: border 200ms ease-in-out 150ms, background-color 100ms ease,
+        margin-bottom 200ms linear, border-radius 200ms, box-shadow 200ms;
 
-  will-change: border, background-color, margin-bottom;
+    will-change: border, background-color, margin-bottom;
 
-  &:not(.accordion--wrapped) {
-    border-bottom-color: $accordion-border-bottom-color;
-  }
+    &:not(.accordion--wrapped) {
+        border-bottom-color: $accordion-border-bottom-color;
+    }
 
-  &:hover {
-    background-color: $accordion-hover-background-color;
-  }
+    &:hover {
+        background-color: $accordion-hover-background-color;
+    }
 }
 
 .accordion--disabled {
-  opacity: 0.6;
+    opacity: 0.6;
 }
 
 .accordion--trigger {
-  pointer-events: all !important;
-  cursor: pointer !important;
+    cursor: pointer !important;
+    pointer-events: all !important;
 }
 
 .accordion__head,
 .accordion__item {
-  cursor: pointer;
-  pointer-events: all;
-  user-select: none;
-  transition: height 300ms;
-  will-change: height;
-  display: flex;
-  height: 32px;
-  align-items: center;
-  position: relative;
-  background-color: transparent;
-
-  .accordion__head__title {
-    flex: 1;
-    white-space: nowrap;
-    width: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    padding-right: 10px;
-    transition: font-size 300ms, transform 300ms, font-weight 300ms;
-    will-change: font-size, font-weight;
-  }
-  .accordion__head__icon {
-    color: $accordion-arrow-color;
-    width: 25px;
-    height: 25px;
-    display: flex;
     align-items: center;
-    justify-content: center;
-    position: relative;
-    transition: transform 250ms ease-in-out;
-    will-change: transform;
-    i {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      &:before {
-        vertical-align: middle;
-      }
-    }
-  }
-
-  .accordion__head__right {
-    margin-right: 5px;
-    overflow: hidden;
+    background-color: transparent;
+    cursor: pointer;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    .right--search {
-      position: absolute;
-      right: 0;
-      transition: opacity 0.25s ease;
-      will-change: opacity;
+    height: 32px;
+    pointer-events: all;
+    position: relative;
+    transition: height 300ms;
+    user-select: none;
+    will-change: height;
+
+    .accordion__head__title {
+        flex: 1;
+        overflow: hidden;
+        padding-right: 10px;
+        text-overflow: ellipsis;
+        transition: font-size 300ms, transform 300ms, font-weight 300ms;
+        white-space: nowrap;
+        width: 100%;
+        will-change: font-size, font-weight;
     }
-    &__search {
-      // transition: transform 0.5s ease, opacity 0.5s ease, width 0.5s ease;
-      transition: transform 200ms ease, opacity 200ms ease, width 200ms ease;
-      will-change: transfrom, opacity, width;
-      transform: translateX(150%);
-      opacity: 0;
-      &--active {
-        transform: translateX(0);
-        opacity: 1;
-      }
-      .input {
-        line-height: 1;
-      }
+    .accordion__head__icon {
+        align-items: center;
+        color: $accordion-arrow-color;
+        display: flex;
+        height: 25px;
+        justify-content: center;
+        position: relative;
+        transition: transform 250ms ease-in-out;
+        width: 25px;
+        will-change: transform;
+        i {
+            align-items: center;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            &::before {
+                vertical-align: middle;
+            }
+        }
     }
-  }
+
+    .accordion__head__right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-right: 5px;
+        overflow: hidden;
+        .right--search {
+            position: absolute;
+            right: 0;
+            transition: opacity 0.25s ease;
+            will-change: opacity;
+        }
+        &__search {
+            opacity: 0;
+            transform: translateX(150%);
+            // transition: transform 0.5s ease, opacity 0.5s ease, width 0.5s ease;
+            transition: transform 200ms ease, opacity 200ms ease,
+                width 200ms ease;
+            will-change: transfrom, opacity, width;
+            &--active {
+                opacity: 1;
+                transform: translateX(0);
+            }
+            .input {
+                line-height: 1;
+            }
+        }
+    }
 }
 
 .accordion--fixed .accordion__head {
-  cursor: default;
+    cursor: default;
 }
 
 .accordion__body {
-  overflow: hidden;
-  position: relative;
-  height: auto !important;
-  max-height: 0;
-  transition: position 300ms ease-in-out;
-  will-change: position;
-  @extend .animation__accordion--close;
+    @extend .animation__accordion--close;
+    height: auto !important;
+    max-height: 0;
+    overflow: hidden;
+    position: relative;
+    transition: position 300ms ease-in-out;
+    will-change: position;
 }
 
 .accordion__intro {
-  padding: 0 9px 6px;
+    padding: 0 9px 6px;
 }
 
 .accordion__content {
-  padding: 0 9px 9px 10px;
+    padding: 0 9px 9px 10px;
 }
 
 // multiple items which look like wrapped accordion entries
 .accordion__item {
-  cursor: default;
-  padding: 8px 9px;
-  min-height: 38px;
-  height: inherit;
-  border-top: 1px solid $accordion-item-border-bottom-color;
+    border-top: 1px solid $accordion-item-border-bottom-color;
+    cursor: default;
+    height: inherit;
+    min-height: 38px;
+    padding: 8px 9px;
 
-  &:before {
-    display: none;
-  }
+    &::before {
+        display: none;
+    }
 }
 
 .accordion.accordion--wrapped .accordion__item {
-  padding-left: 30px;
+    padding-left: 30px;
 }
 
 // if this accordion is in another accordion
 .accordion--wrapped {
-  margin: 0;
-  border-top: 1px solid $accordion-item-border-bottom-color;
+    border-top: 1px solid $accordion-item-border-bottom-color;
+    margin: 0;
 
-  & > .accordion__head {
-    height: 40px;
-  }
+    > .accordion__head {
+        height: 40px;
+    }
 
-  & > .accordion__body {
-    clear: both;
-  }
+    > .accordion__body {
+        clear: both;
+    }
 
-  & .accordion__content {
-    padding: 0 0 18px 17px;
-    margin: 0 9px;
-  }
+    .accordion__content {
+        margin: 0 9px;
+        padding: 0 0 18px 17px;
+    }
 }
 
 .accordion.accordion--wrapped .accordion--wrapped {
-  padding-left: 14px;
+    padding-left: 14px;
 }
 
 .accordion__body > .accordion__content + .accordion__item,
@@ -182,160 +179,168 @@
 .accordion__body > .accordion__intro + * > .accordion--wrapped,
 .accordion__body > .accordion--wrapped:first-child,
 .accordion__body > *:first-child > .accordion--wrapped {
-  border-top: none;
+    border-top: none;
 }
 
 // state open
 .accordion--open {
-  &.accordion:not(.accordion--wrapped) {
-    margin-bottom: 30px;
-    background-color: $accordion-open-background-color;
-    border-color: transparent;
-    & > .accordion__head {
-      height: 38px;
-      .accordion__head__title {
-        font-size: 1.3rem;
-      }
+    &.accordion:not(.accordion--wrapped) {
+        background-color: $accordion-open-background-color;
+        border-color: transparent;
+        margin-bottom: 30px;
+        > .accordion__head {
+            height: 38px;
+            .accordion__head__title {
+                font-size: 1.3rem;
+            }
+        }
     }
-  }
 
-  &.accordion.accordion--wrapped > .accordion__head > .accordion__head__title {
-    font-weight: 700;
-  }
-
-  & > .accordion__head {
-    .accordion__head__icon:not(.accordion__head__icon--no-rotate) {
-      transform: rotate(90deg);
+    &.accordion.accordion--wrapped
+        > .accordion__head
+        > .accordion__head__title {
+        font-weight: 700;
     }
-  }
 
-  & > .accordion__body {
-    max-height: 9999px !important;
-    @extend .animation__accordion--open;
-  }
+    > .accordion__head {
+        .accordion__head__icon:not(.accordion__head__icon--no-rotate) {
+            transform: rotate(90deg);
+        }
+    }
+
+    > .accordion__body {
+        @extend .animation__accordion--open;
+        max-height: 9999px !important;
+    }
 }
 
 // accordion cannot be closed, no arrows, should be used with --open
 .accordion--fixed {
-  &.accordion:not(.accordion--open):hover {
-    background-color: transparent;
-  }
-
-  & > .accordion__head {
-    padding-left: 9px;
-
-    &:hover {
-      cursor: default;
+    &.accordion:not(.accordion--open):hover {
+        background-color: transparent;
     }
 
-    &:before {
-      display: none;
+    > .accordion__head {
+        padding-left: 9px;
+
+        &:hover {
+            cursor: default;
+        }
+
+        &::before {
+            display: none;
+        }
     }
-  }
 }
 
 .accordion.accordion--flex {
-  & > .accordion__head,
-  & > .accordion__body > .accordion__item {
-    display: flex;
-    align-items: center;
+    > .accordion__head,
+    > .accordion__body > .accordion__item {
+        align-items: center;
+        display: flex;
 
-    .__head__right {
-      float: none;
-      margin-left: auto;
-    }
+        .__head__right {
+            float: none;
+            margin-left: auto;
+        }
 
-    .ellipsis {
-      margin-right: 10px;
+        .ellipsis {
+            margin-right: 10px;
+        }
     }
-  }
 }
 
 //animations
 .animation__accordion--close {
-  transition: max-height .5s cubic-bezier(0, 1, 0, 1) -.1s;
-  will-change: max-height;
+    transition: max-height 0.5s cubic-bezier(0, 1, 0, 1) -0.1s;
+    will-change: max-height;
 }
 
 .animation__accordion--open {
-  transition: max-height .5s cubic-bezier(0.5, 0, 1, 0) 0s;
-  will-change: max-height;
+    transition: max-height 0.5s cubic-bezier(0.5, 0, 1, 0) 0s;
+    will-change: max-height;
 }
 
 // mobile hover rewrite
 .chayns--mobile,
 .chayns--app {
-  .accordion:not(.accordion--open):hover {
-    background-color: transparent;
-  }
+    .accordion:not(.accordion--open):hover {
+        background-color: transparent;
+    }
 }
 
 //firefox ellipsis work around
 .chayns-browser--firefox {
-  .accordion__head,
-  .accordion__item {
-    white-space: normal;
-  }
+    .accordion__head,
+    .accordion__item {
+        white-space: normal;
+    }
 }
 
 .accordion__head__right {
-  overflow: hidden;
+    overflow: hidden;
 
-  .right--background {
-    &-appear, &-enter, &-exit {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      transition: opacity 400ms ease;
-      will-change: opacity;
+    .right--background {
+        &-appear,
+        &-enter,
+        &-exit {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: opacity 400ms ease;
+            will-change: opacity;
+        }
+
+        &-enter,
+        &-appear {
+            opacity: 0;
+            right: 5px;
+
+            &-active {
+                opacity: 1;
+            }
+        }
+
+        &-exit {
+            opacity: 1;
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+
+            &-active {
+                opacity: 0;
+            }
+        }
     }
 
-    &-enter, &-appear {
-      right: 5px;
-      opacity: 0;
+    .right--foreground {
+        &-appear,
+        &-enter,
+        &-exit {
+            transition: transform 400ms, opacity 400ms ease;
+            will-change: opacity;
+        }
 
-      &-active {
-        opacity: 1;
-      }
+        &-enter,
+        &-appear {
+            opacity: 0;
+            transform: translateX(150%);
+
+            &-active {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        &-exit {
+            opacity: 1;
+            transform: translateX(0%);
+
+            &-active {
+                opacity: 0;
+                transform: translateX(150%);
+            }
+        }
     }
-
-    &-exit {
-      position: absolute;
-      right: 5px;
-      top: 50%;
-      transform: translateY(-50%);
-      opacity: 1;
-
-      &-active {
-        opacity: 0;
-      }
-    }
-  }
-
-  .right--foreground {
-    &-appear, &-enter, &-exit {
-      transition: transform 400ms, opacity 400ms ease;
-      will-change: opacity;
-    }
-
-    &-enter, &-appear {
-      opacity: 0;
-      transform: translateX(150%);
-
-      &-active {
-        transform: translateX(0);
-        opacity: 1;
-      }
-    }
-
-    &-exit {
-      opacity: 1;
-      transform: translateX(0%);
-
-      &-active {
-        opacity: 0;
-        transform: translateX(150%);
-      }
-    }
-  }
 }

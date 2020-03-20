@@ -1,19 +1,19 @@
-@import '../color';
+@import "../color";
 
 ::-moz-selection {
-  color: $selection-color;
-  background: $selection-background-color;
+    background: $selection-background-color;
+    color: $selection-color;
 }
 
 ::selection {
-  color: $selection-color;
-  background: $selection-background-color;
+    background: $selection-background-color;
+    color: $selection-color;
 }
 
 .chayns--noSelection {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }

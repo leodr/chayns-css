@@ -1,32 +1,32 @@
-@import '../../_color';
+@import "../../_color";
 
 // @deprecated
 .wizardHead {
-  cursor: default;
-  width: 100%;
-  &.pointer{
-    cursor: pointer !important;
-  }
-  .number {
-    font-size: 12px;
-    opacity: 1;
-    width: 18px;
-    height: 18px;
-    text-align: center;
-    transition: all .3s ease-in-out;
-    transform: rotate(0) translate3d(0, -2px, 0);
-    display: inline-block;
-    margin: 0 8px 0 2px;
-  }
-  .wizard_step--notReady{
-    background-color: $wizard-step-notReady-background-color;
-    color: $wizard-step-notReady-color;
-  }
-  .wizard_step--ready{
-    background-color: $wizard-step-ready-background-color;
-    color: $wizard-step-ready-color;
-  }
-  .title {
-    display: inline-block;
-  }
+    cursor: default;
+    width: 100%;
+    &.pointer {
+        cursor: pointer !important;
+    }
+    .number {
+        display: inline-block;
+        font-size: 12px;
+        height: 18px;
+        margin: 0 8px 0 2px;
+        opacity: 1;
+        text-align: center;
+        transform: rotate(0) translate3d(0, -2px, 0);
+        transition: all 0.3s ease-in-out;
+        width: 18px;
+    }
+    .wizard_step--notReady {
+        background-color: $wizard-step-notReady-background-color;
+        color: $wizard-step-notReady-color;
+    }
+    .wizard_step--ready {
+        background-color: $wizard-step-ready-background-color;
+        color: $wizard-step-ready-color;
+    }
+    .title {
+        display: inline-block;
+    }
 }

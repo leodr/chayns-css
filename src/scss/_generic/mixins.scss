@@ -1,4 +1,4 @@
-@import '../_config';
+@import "../_config";
 
 // Media Queries
 //
@@ -6,28 +6,22 @@
 //
 // Compatible in IE8+, Firefox 2, Safari 4+
 @mixin media-query($mq) {
+    $breakpoint-found: false;
 
-  $breakpoint-found: false;
+    @each $breakpoint in $breakpoints {
+        $alias: nth($breakpoint, 1);
+        $condition: nth($breakpoint, 2);
 
-  @each $breakpoint in $breakpoints {
+        @if $mq == $alias and $condition {
+            $breakpoint-found: true;
 
-    $alias: nth($breakpoint, 1);
-    $condition: nth($breakpoint, 2);
-
-    @if $mq == $alias and $condition {
-
-      $breakpoint-found: true;
-
-      @media #{$condition} {
-        @content;
-      }
-
+            @media #{$condition} {
+                @content;
+            }
+        }
     }
 
-  }
-
-  @if $breakpoint-found == false {
-    @warn "Oops! Breakpoint ‘#{$mq}’ does not exist."
-  }
-
+    @if $breakpoint-found == false {
+        @warn "Oops! Breakpoint ‘#{$mq}’ does not exist.";
+    }
 }

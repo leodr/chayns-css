@@ -1,97 +1,99 @@
 // @deprecated
-.cc__map{
-  .marker {
-    height: 21px;
-    width: 21px;
-    margin: 5px 3px 4px -1px;
-  }
+.cc__map {
+    .marker {
+        height: 21px;
+        margin: 5px 3px 4px -1px;
+        width: 21px;
+    }
 
-  .mapBorder {
-    border: 1px solid #dbe2f1;
-    border-bottom-color: transparent;
-    border-radius: 2px;
-    border-bottom: 0px;
-    position: relative;
-  }
+    .mapBorder {
+        border: 1px solid #dbe2f1;
+        border-bottom: 0;
+        border-bottom-color: transparent;
+        border-radius: 2px;
+        position: relative;
+    }
 
-  #map_comp #map__comp--overlay {
-    height: 50px;
-    display: flex;
-    align-items: center;
-    padding: 0 10px;
-    box-shadow: 0px -3px 14px -6px rgba(0, 0, 0, 0.4);
-    position: absolute;
-    z-Index: 10;
-    top: 226px;
-    width: 100%;
-    border: 1px solid #dbe2f1;
-    border-top: 0px;
-  }
+    #map_comp #map__comp--overlay {
+        align-items: center;
+        border: 1px solid #dbe2f1;
+        border-top: 0;
+        box-shadow: 0 -3px 14px -6px rgba(0, 0, 0, 0.4);
+        display: flex;
+        height: 50px;
+        padding: 0 10px;
+        position: absolute;
+        top: 226px;
+        width: 100%;
+        z-index: 10;
+    }
 
-  #map_comp #map__comp--overlay input {
-    width: 100%;
-    display: flex;
-    justify-content: left;
-  }
+    #map_comp #map__comp--overlay input {
+        display: flex;
+        justify-content: left;
+        width: 100%;
+    }
 
-  .markerImg {
-    position: absolute;
-    width: 40px;
-    pointer-events: none;
-    z-index: 10;
-    top: 50%;
-    transform: translate3d(0, calc(-50% - 50px), 0);
-  }
+    .markerImg {
+        pointer-events: none;
+        position: absolute;
+        top: 50%;
+        transform: translate3d(0, calc(-50% - 50px), 0);
+        width: 40px;
+        z-index: 10;
+    }
 
-  .gm-style div a[title='Klicken, um diese Region in Google Maps anzuzeigen'] {
-    display: none !important;
-  }
+    .gm-style
+        div
+        a[title="Klicken, um diese Region in Google Maps anzuzeigen"] {
+        display: none !important;
+    }
 
-  .markerSelect {
-    position: relative;
-    top: 0;
-    bottom: 0;
-    transform: translate3d(0, 0, 0);
-    width: 25px;
-    margin: 0 0px 0 2px;
-  }
+    .markerSelect {
+        bottom: 0;
+        margin: 0 0 0 2px;
+        position: relative;
+        top: 0;
+        transform: translate3d(0, 0, 0);
+        width: 25px;
+    }
 
-  .faIconC {
-    position: absolute;
-    color: white;
-    width: 10px !important;
-    height: 10px !important;
-    right: 3px;
-    top: 3px;
-  }
+    .faIconC {
+        color: white;
+        height: 10px !important;
+        position: absolute;
+        right: 3px;
+        top: 3px;
+        width: 10px !important;
+    }
 
-  #mapMarkerC {
-    position: relative;
-    display: flex;
-    align-content: center;
-    margin-right: 5px;
-  }
+    #mapMarkerC {
+        align-content: center;
+        display: flex;
+        margin-right: 5px;
+        position: relative;
+    }
 
-  .markerDiv {
-    cursor: pointer !important;
-  }
+    .markerDiv {
+        cursor: pointer !important;
+    }
 
-  .centerMarker {
-    position: absolute;
-    display: flex;
-    top: calc(50% - 12px);
-    left: 50%;
-    z-index: 1;
-    pointer-events: none;
-    height: 0px;
-    width: 0px;
-    align-items: center;
-    justify-content: center;
-  }
+    .centerMarker {
+        align-items: center;
+        display: flex;
+        height: 0;
+        justify-content: center;
+        left: 50%;
+        pointer-events: none;
+        position: absolute;
+        top: calc(50% - 12px);
+        width: 0;
+        z-index: 1;
+    }
 
-  .mapDiv {
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-  }
+    .mapDiv {
+        height: 100%;
+        overflow: hidden;
+        position: relative;
+    }
 }

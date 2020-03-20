@@ -1,76 +1,82 @@
-@import '../config';
-@import '../_color';
-@import '../_generic/mixins';
+@import "../config";
+@import "../_color";
+@import "../_generic/mixins";
 
 $headline-sizes: (
-        1: 1.7rem,
-        2: 1.4rem,
-        3: 1.1rem,
-        4: 1rem,
-        5: 0.8rem
+    1: 1.7rem,
+    2: 1.4rem,
+    3: 1.1rem,
+    4: 1rem,
+    5: 0.8rem
 ) !default;
 
 // all heading styles
-@mixin headline($font-size, $bottom-margin:10px) {
-  margin: 0 0 $bottom-margin 0;
-  font-weight: normal;
-  font-size: $font-size;
-  font-family: $headline-font-family;
+@mixin headline($font-size, $bottom-margin: 10px) {
+    font-family: $headline-font-family;
+    font-size: $font-size;
+    font-weight: normal;
+    margin: 0 0 $bottom-margin 0;
 }
 
 @for $i from 1 through 5 {
-  h#{$i},
-  .h#{$i} {
-    $size: map_get($headline-sizes, $i);
-    @include headline($size);
-  }
+    h#{$i},
+    .h#{$i} {
+        $size: map_get($headline-sizes, $i);
+        @include headline($size);
+    }
 }
 
 h1,
 .h1 {
-  color: $h1-color;
-  margin: 1.2rem 0 5px 0;
-  line-height: 1.35;
+    color: $h1-color;
+    line-height: 1.35;
+    margin: 1.2rem 0 5px;
 }
 
 h2,
 .h2 {
-  color: $h2-color;
-  margin: 1.2rem 0 5px 0;
-  line-height: 1.35;
+    color: $h2-color;
+    line-height: 1.35;
+    margin: 1.2rem 0 5px;
 }
 
 h3,
 .h3 {
-  color: $h3-color;
-  margin: 1.2rem 0 5px 0;
-  line-height: 1.5;
+    color: $h3-color;
+    line-height: 1.5;
+    margin: 1.2rem 0 5px;
 }
 
 h4,
 .h4 {
-  color: $h4-color;
-  margin: 1.1rem 0 5px 0;
-  line-height: 1.5;
+    color: $h4-color;
+    line-height: 1.5;
+    margin: 1.1rem 0 5px;
 }
 
 h5,
 .h5 {
-  color: $h5-color;
-  margin: 1.1rem 0 5px 0;
-  line-height: 1.5;
+    color: $h5-color;
+    line-height: 1.5;
+    margin: 1.1rem 0 5px;
 }
 
 .tapp {
-  &, :first-child:not(td) {
-    & > h1, & > .h1,
-    & > h2, & > .h2,
-    & > h3, & > .h3,
-    & > h4, & > .h4,
-    & > h5, & > .h5 {
-      &:first-of-type:first-child {
-        margin-top: 0;
-      }
+    &,
+    :first-child:not(td) {
+        > h1,
+        > .h1,
+        > h2,
+        > .h2,
+        > h3,
+        > .h3,
+        > h4,
+        > .h4,
+        > h5,
+        > .h5 {
+            &:first-of-type:first-child {
+                margin-top: 0;
+            }
+        }
     }
-  }
 }

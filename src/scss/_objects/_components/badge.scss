@@ -1,10 +1,10 @@
-@import '../../_color';
+@import "../../_color";
 
 .badge {
-  padding: 2px 7px;
-  border-radius: 15px;
-  font-size: .8rem;
-  text-align: center;
-  color: $badge-color;
-  background-color: $badge-background-color;
+    background-color: $badge-background-color;
+    border-radius: 15px;
+    color: $badge-color;
+    font-size: 0.8rem;
+    padding: 2px 7px;
+    text-align: center;
 }

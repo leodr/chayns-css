@@ -1,15 +1,15 @@
 // @deprecated
-.cc__opening-times{
+.cc__opening-times {
     .flex {
-        flex-flow: row wrap;
         display: flex;
+        flex-flow: row wrap;
         .flex__left {
             flex: 1;
             padding: 3px 0 0;
         }
         .flex__right {
-            text-align: right;
             max-width: 200px;
+            text-align: right;
             .inline__block {
                 display: inline-block;
             }
@@ -17,18 +17,18 @@
     }
 
     .time__span {
-        width: 170px;
-        max-height: 29px;
         display: flex;
+        max-height: 29px;
         transition-duration: 1500ms;
+        width: 170px;
         span {
-            width: 30px;
             text-align: center;
+            width: 30px;
         }
         &--input {
             float: right;
-            width: 100px;
             text-align: center;
+            width: 100px;
             input {
                 text-align: center;
                 width: 100%;
@@ -46,36 +46,30 @@
     }
 
     .times {
+        transition: all 0.2s;
         &.multiple {
             margin: 15px 0;
         }
         &--disabled {
             .flex__right {
-                opacity: .2;
+                opacity: 0.2;
                 pointer-events: none;
             }
         }
-        transition: all .2s;
         .flex__right {
             span {
                 float: right;
-                width: 30px;
                 text-align: center;
+                width: 30px;
             }
             .choosebutton {
                 float: right;
-                width: 20px;
-                height: 20px;
-                padding: 1.5px 0 0 1px;
                 font-size: 11px;
+                height: 20px;
                 margin: 4px 0 0;
+                padding: 1.5px 0 0 1px;
+                width: 20px;
             }
-        }
-    }
-
-    @media screen and(max-width: 340px) {
-        .flex__right .time .time__input {
-            width: 55px;
         }
     }
     .openingTimesIcon {
@@ -84,5 +78,11 @@
     }
     .choosebutton {
         min-height: 1px;
+    }
+
+    @media screen and(max-width: 340px) {
+        .flex__right .time .time__input {
+            width: 55px;
+        }
     }
 }

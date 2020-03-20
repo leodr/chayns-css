@@ -1,20 +1,49 @@
 {
-  "name": "chayns.css",
-  "version": "4.1.0",
-  "devDependencies": {
-    "browser-sync": "^2.26.3",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^6.0.0",
-    "gulp-sass": "^4.0.1"
-  },
-  "scripts": {
-    "start": "gulp",
-    "build": "gulp bundle"
-  },
-  "author": "Tobit.Software",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/TobitSoftware/chayns-css"
-  }
+    "name": "chayns.css",
+    "version": "4.1.0",
+    "devDependencies": {
+        "browser-sync": "^2.26.7",
+        "gulp": "^4.0.2",
+        "gulp-autoprefixer": "^7.0.1",
+        "gulp-sass": "^4.0.2",
+        "stylelint": "^13.2.1",
+        "stylelint-config-prettier": "8.0.1",
+        "stylelint-config-sass-guidelines": "7.0.0",
+        "prettier": "1.19.1"
+    },
+    "prettier": {
+        "tabWidth": 4
+    },
+    "stylelint": {
+        "extends": [
+            "stylelint-config-sass-guidelines",
+            "stylelint-config-prettier"
+        ],
+        "rules": {
+            "scss/dollar-variable-pattern": null,
+            "selector-no-vendor-prefix": null,
+            "scss/at-import-no-partial-leading-underscore": null,
+            "max-nesting-depth": null,
+            "selector-class-pattern": null,
+            "property-no-vendor-prefix": null,
+            "function-url-quotes": null,
+            "selector-no-qualifying-type": null,
+            "declaration-property-value-blacklist": null,
+            "selector-max-compound-selectors": null,
+            "scss/at-extend-no-missing-placeholder": null,
+            "selector-max-id": null,
+            "color-named": null,
+            "at-rule-no-vendor-prefix": null
+        }
+    },
+    "scripts": {
+        "start": "gulp",
+        "build": "gulp bundle"
+    },
+    "author": "Tobit.Software",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/TobitSoftware/chayns-css"
+    }
 }

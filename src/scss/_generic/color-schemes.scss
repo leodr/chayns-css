@@ -1,200 +1,200 @@
-@import '../_color';
+@import "../_color";
 
 .chayns__background-color {
-  background-color: $color;
+    background-color: $color;
 }
 
 .chayns__color {
-  color: $color;
+    color: $color;
 }
 
 .chayns__border-color {
-  border-color: $color;
-}
-
-@each $key, $color in $colors {
-  .chayns__background-color--#{$key} {
-    background-color: $color;
-  }
-
-  .chayns__color--#{$key} {
-    color: $color;
-  }
-
-  .chayns__border-color--#{$key} {
     border-color: $color;
-  }
 }
 
 @each $key, $color in $colors {
-  .chayns__background-color--#{$key}i {
-    background-color: $color !important;
-  }
+    .chayns__background-color--#{$key} {
+        background-color: $color;
+    }
 
-  .chayns__color--#{$key}i {
-    color: $color !important;
-  }
+    .chayns__color--#{$key} {
+        color: $color;
+    }
 
-  .chayns__border-color--#{$key}i {
-    border-color: $color !important;;
-  }
+    .chayns__border-color--#{$key} {
+        border-color: $color;
+    }
+}
+
+@each $key, $color in $colors {
+    .chayns__background-color--#{$key}i {
+        background-color: $color !important;
+    }
+
+    .chayns__color--#{$key}i {
+        color: $color !important;
+    }
+
+    .chayns__border-color--#{$key}i {
+        border-color: $color !important;
+    }
 }
 
 // @deprecated
 @each $key, $color in $colors1 {
-  .chayns__background-color--white-#{$key} {
-    background-color: $color;
-  }
+    .chayns__background-color--white-#{$key} {
+        background-color: $color;
+    }
 
-  .chayns__color--white-#{$key} {
-    color: $color;
-  }
+    .chayns__color--white-#{$key} {
+        color: $color;
+    }
 
-  .chayns__border-color--white-#{$key} {
-    border-color: $color;
-  }
+    .chayns__border-color--white-#{$key} {
+        border-color: $color;
+    }
 }
 
 // @deprecated
 @each $key, $color in $colors2 {
-  .chayns__background-color--light-#{$key} {
-    background-color: $color;
-  }
+    .chayns__background-color--light-#{$key} {
+        background-color: $color;
+    }
 
-  .chayns__color--light-#{$key} {
-    color: $color;
-  }
+    .chayns__color--light-#{$key} {
+        color: $color;
+    }
 
-  .chayns__border-color--light-#{$key} {
-    border-color: $color;
-  }
+    .chayns__border-color--light-#{$key} {
+        border-color: $color;
+    }
 }
 
 // @deprecated
 @each $key, $color in $colors3 {
-  .chayns__background-color--medium-#{$key} {
-    background-color: $color;
-  }
+    .chayns__background-color--medium-#{$key} {
+        background-color: $color;
+    }
 
-  .chayns__color--medium-#{$key} {
-    color: $color;
-  }
+    .chayns__color--medium-#{$key} {
+        color: $color;
+    }
 
-  .chayns__border-color--medium-#{$key} {
-    border-color: $color;
-  }
+    .chayns__border-color--medium-#{$key} {
+        border-color: $color;
+    }
 }
 
 // @deprecated
 @each $key, $color in $colors4 {
-  .chayns__background-color--dark-#{$key} {
-    background-color: $color;
-  }
+    .chayns__background-color--dark-#{$key} {
+        background-color: $color;
+    }
 
-  .chayns__color--dark-#{$key} {
-    color: $color;
-  }
+    .chayns__color--dark-#{$key} {
+        color: $color;
+    }
 
-  .chayns__border-color--dark-#{$key} {
-    border-color: $color;
-  }
+    .chayns__border-color--dark-#{$key} {
+        border-color: $color;
+    }
 }
 
 // @deprecated
 @each $key, $color in $shades {
-  .chayns__background-color--shade-#{$key} {
-    background-color: $color;
-  }
+    .chayns__background-color--shade-#{$key} {
+        background-color: $color;
+    }
 
-  .chayns__color--shade-#{$key} {
-    color: $color;
-  }
+    .chayns__color--shade-#{$key} {
+        color: $color;
+    }
 
-  .chayns__border-color--shade-#{$key} {
-    border-color: $color;
-  }
+    .chayns__border-color--shade-#{$key} {
+        border-color: $color;
+    }
 }
 
 @each $key, $color in $red {
-  .chayns__background-color--red-#{$key} {
-    background-color: $color;
-  }
+    .chayns__background-color--red-#{$key} {
+        background-color: $color;
+    }
 
-  .chayns__color--red-#{$key} {
-    color: $color;
-  }
+    .chayns__color--red-#{$key} {
+        color: $color;
+    }
 
-  .chayns__border-color--red-#{$key} {
-    border-color: $color;
-  }
+    .chayns__border-color--red-#{$key} {
+        border-color: $color;
+    }
 }
 
 @each $key, $color in $yellow {
-  .chayns__background-color--yellow-#{$key} {
-    background-color: $color;
-  }
+    .chayns__background-color--yellow-#{$key} {
+        background-color: $color;
+    }
 
-  .chayns__color--yellow-#{$key} {
-    color: $color;
-  }
+    .chayns__color--yellow-#{$key} {
+        color: $color;
+    }
 
-  .chayns__border-color--yellow-#{$key} {
-    border-color: $color;
-  }
+    .chayns__border-color--yellow-#{$key} {
+        border-color: $color;
+    }
 }
 
 @each $key, $color in $green {
-  .chayns__background-color--green-#{$key} {
-    background-color: $color;
-  }
+    .chayns__background-color--green-#{$key} {
+        background-color: $color;
+    }
 
-  .chayns__color--green-#{$key} {
-    color: $color;
-  }
+    .chayns__color--green-#{$key} {
+        color: $color;
+    }
 
-  .chayns__border-color--green-#{$key} {
-    border-color: $color;
-  }
+    .chayns__border-color--green-#{$key} {
+        border-color: $color;
+    }
 }
 
 @each $key, $color in $red {
-  .chayns__background-color--red-#{$key}i {
-    background-color: $color !important;
-  }
+    .chayns__background-color--red-#{$key}i {
+        background-color: $color !important;
+    }
 
-  .chayns__color--red-#{$key}i {
-    color: $color !important;
-  }
+    .chayns__color--red-#{$key}i {
+        color: $color !important;
+    }
 
-  .chayns__border-color--red-#{$key}i {
-    border-color: $color !important;
-  }
+    .chayns__border-color--red-#{$key}i {
+        border-color: $color !important;
+    }
 }
 
 @each $key, $color in $yellow {
-  .chayns__background-color--yellow-#{$key}i {
-    background-color: $color !important;
-  }
+    .chayns__background-color--yellow-#{$key}i {
+        background-color: $color !important;
+    }
 
-  .chayns__color--yellow-#{$key}i {
-    color: $color !important;
-  }
+    .chayns__color--yellow-#{$key}i {
+        color: $color !important;
+    }
 
-  .chayns__border-color--yellow-#{$key}i {
-    border-color: $color !important;
-  }
+    .chayns__border-color--yellow-#{$key}i {
+        border-color: $color !important;
+    }
 }
 
 @each $key, $color in $green {
-  .chayns__background-color--green-#{$key}i {
-    background-color: $color !important;
-  }
+    .chayns__background-color--green-#{$key}i {
+        background-color: $color !important;
+    }
 
-  .chayns__color--green-#{$key}i {
-    color: $color !important;
-  }
+    .chayns__color--green-#{$key}i {
+        color: $color !important;
+    }
 
-  .chayns__border-color--green-#{$key}i {
-    border-color: $color !important;
-  }
+    .chayns__border-color--green-#{$key}i {
+        border-color: $color !important;
+    }
 }

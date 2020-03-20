@@ -1,70 +1,70 @@
-@import '../_color';
+@import "../_color";
 
 .content__card {
-  padding: 8px 12px;
-  background-color: $content-card-background-color;
+    background-color: $content-card-background-color;
+    padding: 8px 12px;
 
-  &:not(:last-child) {
-    margin-bottom: 8px;
-  }
-
-  &.content__card--success {
-    border-width: 1px;
-    border-style: solid;
-    border-color: $content-card-success-border-color;
-    background-color: $content-card-success-background-color;
-    color: $content-card-success-color;
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p,
-    a,
-    span {
-      color: $content-card-success-color;
+    &:not(:last-child) {
+        margin-bottom: 8px;
     }
-  }
 
-  &.content__card--warning {
-    border-width: 1px;
-    border-style: solid;
-    border-color: $content-card-warning-border-color;
-    background-color: $content-card-warning-background-color;
-    color: $content-card-warning-color;
+    &.content__card--success {
+        background-color: $content-card-success-background-color;
+        border-color: $content-card-success-border-color;
+        border-style: solid;
+        border-width: 1px;
+        color: $content-card-success-color;
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p,
-    a,
-    span {
-      color: $content-card-warning-color;
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        a,
+        span {
+            color: $content-card-success-color;
+        }
     }
-  }
 
-  &.content__card--danger {
-    border-width: 1px;
-    border-style: solid;
-    border-color: $content-card-danger-border-color;
-    background-color: $content-card-danger-background-color;
-    color: $content-card-danger-color;
+    &.content__card--warning {
+        background-color: $content-card-warning-background-color;
+        border-color: $content-card-warning-border-color;
+        border-style: solid;
+        border-width: 1px;
+        color: $content-card-warning-color;
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p,
-    a,
-    span {
-      color: $content-card-danger-color;
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        a,
+        span {
+            color: $content-card-warning-color;
+        }
     }
-  }
+
+    &.content__card--danger {
+        background-color: $content-card-danger-background-color;
+        border-color: $content-card-danger-border-color;
+        border-style: solid;
+        border-width: 1px;
+        color: $content-card-danger-color;
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        a,
+        span {
+            color: $content-card-danger-color;
+        }
+    }
 }

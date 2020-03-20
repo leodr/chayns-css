@@ -1,84 +1,85 @@
-@import '../../_color';
+@import "../../_color";
 
 // @deprecated
 .input-group {
-  position: relative;
+    position: relative;
 
-  &--disabled{
-    opacity: 0.6;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    pointer-events: none;
-  }
-
-  &__icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 30px;
-    opacity: .0;
-    pointer-events: none;
-    cursor: pointer;
-    transition: all .4s;
-  }
-
-  &.labelRight label, input:focus + label {
-    right: 0 !important;
-    left: 0 !important;
-    .chayns--app & {
-      opacity: 0;
-      right: 100%;
-    }
-    &.labelIcon {
-      opacity: 0 !important;
-    }
-  }
-
-  input,
-  textarea {
-    display: inline-block;
-    //padding-right: 25px;
-
-    &.input {
-      width: 100%;
-
-      & + label {
-        position: absolute;
-        text-align: right;
-        top: 0;
-        margin: 6px 1px;
-        left: 0;
-        right: 100%;
-        white-space: nowrap;
-        color: $input-placeholder-color;
+    &--disabled {
+        opacity: 0.6;
         pointer-events: none;
-        transition: left 0.4s ease-out, right 0.4s ease-out,
-          opacity 0.4s ease-out;
-        opacity: 1;
-        font-family: inherit;
-        font-size: 100%;
-        line-height: 1.15;
-      }
-
-      &[validate]:not(.valid) + label {
-        color: $input-placeholder-required-color !important;
-        font-weight: 700;
-      }
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
     }
-  }
+
+    &__icon {
+        align-items: center;
+        cursor: pointer;
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        opacity: 0;
+        pointer-events: none;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transition: all 0.4s;
+        width: 30px;
+    }
+
+    &.labelRight label,
+    input:focus + label {
+        left: 0 !important;
+        right: 0 !important;
+        .chayns--app & {
+            opacity: 0;
+            right: 100%;
+        }
+        &.labelIcon {
+            opacity: 0 !important;
+        }
+    }
+
+    input,
+    textarea {
+        display: inline-block;
+        //padding-right: 25px;
+
+        &.input {
+            width: 100%;
+
+            + label {
+                color: $input-placeholder-color;
+                font-family: inherit;
+                font-size: 100%;
+                left: 0;
+                line-height: 1.15;
+                margin: 6px 1px;
+                opacity: 1;
+                pointer-events: none;
+                position: absolute;
+                right: 100%;
+                text-align: right;
+                top: 0;
+                transition: left 0.4s ease-out, right 0.4s ease-out,
+                    opacity 0.4s ease-out;
+                white-space: nowrap;
+            }
+
+            &[validate]:not(.valid) + label {
+                color: $input-placeholder-required-color !important;
+                font-weight: 700;
+            }
+        }
+    }
 }
 
 .chayns-browser--edge .input-group {
-  input,
-  textarea {
-    &.input + label {
-      font-size: 100%;
+    input,
+    textarea {
+        &.input + label {
+            font-size: 100%;
+        }
     }
-  }
 }

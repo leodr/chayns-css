@@ -1,94 +1,90 @@
-@import '../../_color';
+@import "../../_color";
 
 // @deprecated
 .cc__file-input {
-  border: 1px dashed $file-input-border-color;
-  color: $file-input-color;
-  overflow: hidden;
-  transition: border .1s;
+    border: 1px dashed $file-input-border-color;
+    color: $file-input-color;
+    overflow: hidden;
+    transition: border 0.1s;
 
-  &--custom {
-    display: flex;
-    position: relative;
-    align-items: center;
-  }
-
-  &--disabled {
-    opacity: 0.3;
-    pointer-events: none;
-  }
-
-  &--placeholder {
-    display: flex;
-    height: 60px;
-    padding: 10px;
-    line-height: 1.5;
-
-    user-select: none;
-    position: relative;
-    cursor: pointer;
-
-    transition: all .1s;
-    justify-content: center;
-  }
-
-  &--hover {
-    height: 70px;
-    background-color: rgba($color, 0.1);
-
-    .cc__file-input__icon {
+    &--custom {
+        align-items: center;
+        display: flex;
+        position: relative;
     }
-  }
-
-  &__icon {
-    margin-right: 10px;
-  }
-
-  &__input {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-  }
-
-  &__message {
-  }
-
-  &__icon, &__message {
-    align-self: center;
-    justify-self: center;
-  }
-
-  &:hover, &--hover {
-    border: 1px dashed $file-input-border-hover-color;
-
-    .cc__file-input__split {
-      &:not(:last-child) {
-        border-right: 1px dashed $file-input-border-hover-color;
-      }
-
-      &:not(:hover) {
-        .cc__file-input--placeholder {
-          opacity: 0.4;
-        }
-      }
-    }
-  }
-
-  &__split {
-    flex: 1;
 
     &--disabled {
-      opacity: 0.5;
-      pointer-events: none;
-      cursor: default;
+        opacity: 0.3;
+        pointer-events: none;
     }
 
-    &:not(:last-child) {
-      border-right: 1px dashed $file-input-border-color;
+    &--placeholder {
+        cursor: pointer;
+        display: flex;
+        height: 60px;
+        justify-content: center;
+        line-height: 1.5;
+        padding: 10px;
+        position: relative;
+
+        transition: all 0.1s;
+
+        user-select: none;
     }
-  }
+
+    &--hover {
+        background-color: rgba($color, 0.1);
+        height: 70px;
+    }
+
+    &__icon {
+        margin-right: 10px;
+    }
+
+    &__input {
+        cursor: pointer;
+        height: 100%;
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+
+    &__icon,
+    &__message {
+        align-self: center;
+        justify-self: center;
+    }
+
+    &:hover,
+    &--hover {
+        border: 1px dashed $file-input-border-hover-color;
+
+        .cc__file-input__split {
+            &:not(:last-child) {
+                border-right: 1px dashed $file-input-border-hover-color;
+            }
+
+            &:not(:hover) {
+                .cc__file-input--placeholder {
+                    opacity: 0.4;
+                }
+            }
+        }
+    }
+
+    &__split {
+        flex: 1;
+
+        &--disabled {
+            cursor: default;
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        &:not(:last-child) {
+            border-right: 1px dashed $file-input-border-color;
+        }
+    }
 }

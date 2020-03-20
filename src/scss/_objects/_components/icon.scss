@@ -1,32 +1,32 @@
-@import '../../_color';
-@import '../../_config';
+@import "../../_color";
+@import "../../_config";
 
 // @deprecated
 .react-chayns-icon {
-  font-size: round($base-font-size);
-  color: map_get($colors, headline);
-  
-  .button & {
-    font-size: inherit;
-    color: inherit;
-  }
+    color: map_get($colors, headline);
+    font-size: round($base-font-size);
 
-  &--clickable {
-    cursor: pointer;
-  }
+    .button & {
+        color: inherit;
+        font-size: inherit;
+    }
 
-  &--disabled {
-    pointer-events: none;
-    opacity: .4;
-  }
+    &--clickable {
+        cursor: pointer;
+    }
+
+    &--disabled {
+        opacity: 0.4;
+        pointer-events: none;
+    }
 }
 
 .chayns__icon {
-  color: map_get($colors, headline);
-  font-size: round($base-font-size);
-  
-  .button & {
-    font-size: inherit;
-    color: inherit;
-  }
+    color: map_get($colors, headline);
+    font-size: round($base-font-size);
+
+    .button & {
+        color: inherit;
+        font-size: inherit;
+    }
 }
